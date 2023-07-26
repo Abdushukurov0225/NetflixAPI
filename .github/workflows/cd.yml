@@ -36,7 +36,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 192.168.11.193
-          username: root
+          username: hp-victus
           port: 8000
           key: ${{ secrets.KEY }}
           script: |
