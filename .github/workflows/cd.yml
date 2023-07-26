@@ -36,8 +36,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 192.168.11.193
-          username: hp-victus
-          port: 8000
+          username: root
           key: ${{ secrets.KEY }}
           script: |
             cd NetflixAPI
