@@ -37,6 +37,7 @@ jobs:
         with:
           host: 192.168.11.193
           username: root
+          port: 8000
           key: ${{ secrets.KEY }}
           script: |
             cd NetflixAPI
