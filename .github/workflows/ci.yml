@@ -4,6 +4,16 @@ on: [push]
 
 jobs:
   run-tests:
+    services:
+      postgres:
+        image: postgres:9.6
+        env:
+          POSTGRES_DB: postgres
+          POSRGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULE: netflix.settings
