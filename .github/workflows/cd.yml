@@ -27,6 +27,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Tests
         run: python manage.py test
+      - name: Test with flake8
+        run: flake8
 
   deploy:
     runs-on: ubuntu-latest

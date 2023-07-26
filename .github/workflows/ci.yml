@@ -1,6 +1,6 @@
 name: Netflix API CI
 
-on: [push]
+on: [ push ]
 
 jobs:
   run-tests:
@@ -13,7 +13,6 @@ jobs:
           POSTGRES_PASSWORD: postgres
         ports:
           - 5432:5432
-
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULE: netflix.settings
@@ -26,3 +25,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Tests
         run: python manage.py test
+      - name: Test with flake8
+        run: flake8
